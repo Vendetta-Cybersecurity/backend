@@ -365,7 +365,7 @@ def estadisticas_generales(request):
         total_departamentos = Departamento.objects.filter(estado='activo').count()
         total_roles = Rol.objects.filter(estado='activo').count()
         usuarios_activos = Usuario.objects.filter(estado='activo').count()
-        sesiones_activas = Sesion.objects.filter(activa=True, fecha_expiracion__gt=timezone.now()).count()
+        sesiones_activas = Sesion.objects.filter(activa=True).count()
         notificaciones_no_leidas = Notificacion.objects.filter(leida=False).count()
         
         data = {
