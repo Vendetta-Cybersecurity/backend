@@ -67,14 +67,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mybackend.wsgi.application'
 
-# Database - MariaDB Configuration
+# Database - MariaDB Configuration osea la de DEBIAN
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'figger_energy',
-        'USER': 'root',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
+        'USER': 'admin',
+        'PASSWORD': 'password', 
+        'HOST': '192.168.1.101',
         'PORT': '3306',
         'OPTIONS': {
             'sql_mode': 'traditional',
